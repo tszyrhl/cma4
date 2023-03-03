@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hub</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-web-portals@1.0.1/dist/aframe-web-portals.umd.js"></script>
+	<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+</head>
+
+  </head>
+
+  <body>
+    <a-scene>
+      <a-entity
+        id="player"
+        position="0 1.6 0"
+        camera
+        wasd-controls="acceleration: 25;"
+        look-controls="pointerLockEnabled: false"
+      >
+        <a-cursor position="0 0 -.05" scale=".04 .04 1"></a-cursor>
+        <a-cylinder radius="0.75"></a-cylinder>
+      </a-entity>
+	  
+      <a-entity
+        position="-3 0 -6"
+        web-portal="url:hoc.html; text:Hall of Colours;"
+      ></a-entity>
+      <a-entity
+        position="0 0 -6"
+        web-portal="url:ss.html; text:Summit Shrike;"
+      ></a-entity>
+	  <a-entity
+        position="3 0 -6"
+        web-portal="url:http://tszyrhl.github.io/ic/; text:Infinite Crossroads;"
+      ></a-entity>
+	  
+      <a-sky color="#aff"></a-sky>
+	  
+	  <a-entity environment="preset: egypt; dressingAmount: 0"></a-entity></a-scene>
+    </a-scene>
+  </body>
+</html>
